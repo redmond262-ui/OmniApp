@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: runs-on: ubuntu-24.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
@@ -24,9 +24,7 @@ jobs:
 
       - name: Crear debug.keystore
         run: |
-          keytool -genkey -v -keystore debug.keystore -storepass android \
-            -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 \
-            -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+          keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
 
       - name: Compilar APK de debug
         run: gradle :app:assembleDebug --no-daemon --stacktrace
