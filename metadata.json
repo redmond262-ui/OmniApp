@@ -1,0 +1,6 @@
+{
+  "name": "OmniHub",
+  "description": "Asistente diario y comparador inteligente de compras locales estilo Mercado Libre y Booking con rutas interactivas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
